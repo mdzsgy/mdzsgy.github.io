@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>播放器图标</title>
+  <style>
+    /* 最外层容器：模拟深色渐变背景 */
+    .player-icon {
+      width: 200px;
+      height: 200px;
+      /* 径向渐变模拟深色质感 */
+      background: radial-gradient(circle at center, #555, #ccde83);
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 中间层：带边框的深色方块 */
+    .player-box {
+      width: 100px;
+      height: 100px;
+      /* 线性渐变做背景质感 */
+      background: linear-gradient(135deg, #5614ad, #a41ca9);
+      /* 盒子模型边框 */
+      border: 8px solid #1f299f;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 播放按钮圆形背景 */
+    .play-btn {
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 用伪元素绘制播放三角形 */
+    .play-btn::after {
+      content: '';
+      width: 0;
+      height: 0;
+      /* 用边框绘制三角形 */
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 12px solid #198575;
+    }
+  </style>
+</head>
+<body>
+  <div class="player-icon">
+    <div class="player-box">
+      <div class="play-btn"></div>
+    </div>
+  </div>
+</body>
+</html>
